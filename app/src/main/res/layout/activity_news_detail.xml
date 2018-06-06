@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".ui.activity.NewsDetailActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title" />
+
+        <RelativeLayout
+            android:id="@+id/rl_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <com.djc.scdjc.view.rcImage.RCImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:scaleType="fitXY"
+                app:round_as_circle="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/iv_photo">
+
+                <TextView
+                    android:id="@+id/tv_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="作者：张三"
+                    android:textColor="#222222"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/tv_author"
+                    android:text="执业号：1346997456689"
+                    android:textColor="#222222"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_number"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="简介：个人感觉排名第一的答案将简单问题复杂化了，其实Google在最新(截止2015年6月)的suport包已经提供了很好的支持。"
+                    android:textColor="#999999"
+                    android:textSize="10sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tv_des">
+
+
+                    <TextView
+                        android:id="@+id/tv_teacher_read"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#999"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv_teacher_zan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#999"
+                        android:textSize="11sp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_article_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_info"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"
+            android:text="有图有真相，以下截图和题主描述完全一致"
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="15dp"
+                android:text="2018-3-25 11:25:45"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/tv_time"
+                android:text="来源:四川大决策"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="16dp">
+
+
+                <TextView
+                    android:id="@+id/tv_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_read"
+                    android:drawablePadding="2dp"
+                    android:text="2222"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_zan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ic_zan"
+                    android:drawablePadding="2dp"
+                    android:text="1111"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--<org.sufficientlysecure.htmltextview.HtmlTextView-->
+        <!--android:id="@+id/htv_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/tv_time"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:textColor="#222222"-->
+        <!--android:textSize="14sp" />-->
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <com.djc.scdjc.view.NoScrollWebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_zan"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/zan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/text_statement"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="上一篇"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="下一篇"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_advertising"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_ad" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
